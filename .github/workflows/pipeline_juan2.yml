@@ -1,29 +1,21 @@
 name: CI
 
 on:
-  
   push:
   workflow_dispatch:
 
 jobs:
-  
   build:
-    
     runs-on: ubuntu-latest
 
     steps:
-    
       - uses: actions/checkout@v3
 
       - name: build
         run: |
-         echo "building"
+          echo "building"
         
-      - name: SonarCloud analisys
+      - name: SonarCloud analysis
         run: |
-            chmod +x gradlew
-            ./gradlew build sonar -Dsonar.token=${{ secret.TOKEN_SONARCLOUD_JMOLINAE }}
-             
-         
-
-  
+          chmod +x gradlew
+          ./gradlew build sonar -Dsonar.token=${{ secrets.TOKEN_SONARCLOUD_JMOLINAE }}
