@@ -18,14 +18,11 @@ jobs:
       - name: build
         run: |
          echo "building"
-  test:
-     runs-on: ubuntu-latest
-     needs: build 
-     steps:
-       - name: SonarCloud analisys
-         run: |
-            chmod +x gradlew
-            ./gradlew build sonar -Dsonar.token=${{ secret.TOKEN_SONARCLOUD_JMOLINAE }}
+        
+      - name: SonarCloud analisys
+        run: |
+              chmod +x gradlew
+              ./gradlew build sonar -Dsonar.token=${{ secret.TOKEN_SONARCLOUD_JMOLINAE }}
              
          
 
