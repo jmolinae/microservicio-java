@@ -1,4 +1,4 @@
-name: CI
+hname: CI
 
 on:
   
@@ -17,8 +17,8 @@ jobs:
 
       - name: build
         run: |
-          chmod +x gradlew
-          ./gradlew build
-          ls -ltr
+         echo "hola mundo"
+
+         
 
   
