@@ -34,12 +34,12 @@ jobs:
       
       - name: Docker Build
         run: | 
-          docker build --tag clagosu/pet-clinic:latest .
+          docker build --tag juanmolina31/pet-clinic:latest .
           docker images
 
       - name: Docker Push
         run: |
-          docker push clagosu/pet-clinic 
+          docker push juanmolina31/pet-clinic
 
   deploy: 
     runs-on: self-hosted 
