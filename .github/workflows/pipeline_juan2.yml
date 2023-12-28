@@ -26,4 +26,13 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Docker Build
+        run: | 
+          docker build --tag juanmolina31/pet-clinic:latest .
+          docker images
+
+      - name: Docker Push
+        run: |
+          docker push juanmolina31/pet-clinic
+
       
